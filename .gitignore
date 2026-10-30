@@ -1,0 +1,8 @@
+# Claude Code OAuth credentials - never commit these.
+# The container stores its rotating login tokens here.
+data/
+credentials.json
+*.credentials.json
+
+# Token files written mid-refresh
+*.tmp
