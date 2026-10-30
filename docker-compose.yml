@@ -1,0 +1,13 @@
+# Add this service to the same compose file / network as your Glance container.
+services:
+  claude-usage:
+    build: .
+    container_name: claude-usage
+    restart: unless-stopped
+    environment:
+      CREDENTIALS_FILE: /data/credentials.json
+    volumes:
+      # Mount the directory, not the file, so refreshed tokens can be saved.
+      - ./data:/data
+    # No published ports: Glance reaches it at http://claude-usage:8080 over
+    # the compose network.

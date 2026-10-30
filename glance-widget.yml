@@ -1,0 +1,5 @@
+# Paste into a column of your glance.yml.
+- type: extension
+  url: http://claude-usage:8080
+  cache: 1m
+  allow-potentially-dangerous-html: true
